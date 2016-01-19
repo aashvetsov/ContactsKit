@@ -165,9 +165,7 @@
             }
         });
     });
-}
-    
-    
+
 #warning Added contact request
     CNContactStore *store = [[CNContactStore alloc] init];
     NSArray *keys = @[CNContactIdentifierKey, CNContactGivenNameKey, CNContactMiddleNameKey, CNContactBirthdayKey, CNContactPhoneNumbersKey];
@@ -181,6 +179,7 @@
     }];
     
     NSLog(@"%@",array);
+}
 
 - (void)startObserveChanges
 {

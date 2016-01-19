@@ -346,13 +346,13 @@
             }
             _emails = emails;
         }
-        if (fieldMask & CKContactFieldPhoto)
+        if (fieldMask & CKContactFieldImageData)
         {
-            _photo = [UIImage imageWithData:contact.imageData scale:[UIScreen mainScreen].scale];
+            _imageData = contact.imageData;
         }
-        if (fieldMask & CKContactFieldThumbnail)
+        if (fieldMask & CKContactFieldThumbnailData)
         {
-            _thumbnail = [UIImage imageWithData:contact.thumbnailImageData scale:[UIScreen mainScreen].scale];
+            _thumbnailData = contact.thumbnailImageData;
         }
         if (fieldMask & CKContactFieldAddresses)
         {

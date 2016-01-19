@@ -10,6 +10,8 @@
 #import <AddressBook/AddressBook.h>
 #import "CKAddressBook.h"
 
+@class CNContact;
+
 @interface CKContact ()
 
 @property (nonatomic, assign, readonly) CKContactField fieldMask;
