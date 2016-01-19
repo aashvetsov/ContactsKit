@@ -8,6 +8,7 @@
 
 #import "CKAddress_Private.h"
 #import <AddressBook/AddressBook.h>
+#import <Contacts/CNPostalAddress.h>
 
 @implementation CKAddress
 
@@ -24,6 +25,21 @@
         _zip = dictionary[(__bridge NSString *)kABPersonAddressZIPKey];
         _country = dictionary[(__bridge NSString *)kABPersonAddressCountryKey];
         _ISOCountryCode = dictionary[(__bridge NSString *)kABPersonAddressCountryCodeKey];
+    }
+    return self;
+}
+
+- (instancetype)initWithPostalAddress:(CNPostalAddress *)address
+{
+    self = [super init];
+    if (self)
+    {
+        _street = address.street;
+        _city = address.city;
+        _state = address.state;
+        _zip = address.postalCode;
+        _country = address.country;
+        _ISOCountryCode = address.ISOCountryCode;
     }
     return self;
 }
